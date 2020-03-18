@@ -1,0 +1,24 @@
+{
+  "name": "starter-kit",
+  "version": "1.0.0",
+  "description": "Boilerplate for Nuxt + Contentful",
+  "author": "Corey Snyder",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^13.4.0",
+    "contentful": "^7.10.0",
+    "cross-env": "^7.0.0",
+    "nuxt": "^2.11.0",
+    "nuxt-helmet": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}
