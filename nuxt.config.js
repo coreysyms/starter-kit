@@ -47,19 +47,20 @@ css: [
   */
   modules: [
     'nuxt-helmet',
+    '@nuxtjs/axios',
   ],
   helmet: {
-    dnsPrefetchControl: false,
-    expectCt: false,
+    dnsPrefetchControl: true,
+    expectCt: true,
     featurePolicy: false,
     frameguard: true,
     hidePoweredBy: true,
     hsts: true,
     ieNoOpen: true,
-    noCache: false,
+    noCache: true,
     noSniff: true,
-    permittedCrossDomainPolicies: false,
-    referrerPolicy: false,
+    permittedCrossDomainPolicies: true,
+    referrerPolicy: true,
     xssFilter: true
   },
   /*
@@ -82,9 +83,9 @@ css: [
   ** Enviros
   */
  env: {
-  CTF_SPACE_ID: 'XX-XX-XX-XX',
-  CTF_CDA_ACCESS_TOKEN: 'XX-XX-XX-XX',
-  CTF_CDA_ACCESS_TOKEN_PREVIEW_API: 'XX-XX-XX-XX',
+  CTF_SPACE_ID: '2s0mqloigcvr',
+  CTF_CDA_ACCESS_TOKEN: 'TwBmIakvUGhppQUWHHSz1lxjGYB5eZE5X3MrEHOoQ6U',
+  CTF_CDA_ACCESS_TOKEN_PREVIEW_API: 'cdJBB9WdWAfEERyAA8_KJiACcN47FLxAmrNtItbTA7s',
 },
 
   /*

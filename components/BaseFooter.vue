@@ -1,10 +1,27 @@
 <template>
     <footer>
         <nav>
-            <div class="logo"><nuxt-link to="/"><img src="https://placehold.it/200x100" /></nuxt-link></div>
+            <div class="logo"><nuxt-link to="/">LOGO</nuxt-link></div>
             <ul>
-                <li v-for="navitem in nav.fields.pages" v-bind:key="navitem.sys.id"><nuxt-link :to="'/'+navitem.fields.slug">{{ navitem.fields.title }}</nuxt-link></li>
+                <li v-for="navitem in nav" v-bind:key="navitem.sys.id">
+                    <nuxt-link v-if="navitem.fields.pages && navitem.fields.menuLink" :to="'/' +navitem.fields.menuLink.fields.slug">{{ navitem.fields.label }}</nuxt-link>
+                    <div v-else-if="navitem.fields.pages" tabindex="0">{{ navitem.fields.menuLabel }}</div>
+                    <nuxt-link v-else :to="'/' +navitem.fields.slug">{{ navitem.fields.title }}</nuxt-link>
+
+                    <!-- child menu -->
+                    <ul v-if="navitem.fields.pages">
+                        <li v-for="childnavitem in navitem.fields.pages" v-bind:key="childnavitem.sys.id">
+                            <nuxt-link :to="childnavitem.fields.slug">{{ childnavitem.fields.title }}</nuxt-link>
+                        </li>
+                    </ul>
+                </li>
             </ul>
+            <div class="sign-up-box">
+                <div class="social">
+                    social
+                </div>
+                <!--<h5>Sign up for our Newsletter</h5>-->
+            </div>
         </nav>
 
         <div id="cookies-banner" style="display:none;">
@@ -43,8 +60,8 @@ export default {
             document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
         }
 
-        if (!getCookie("diu-cookies-policy")) {
-            setCookie("diu-cookies-policy", "true", 60);
+        if (!getCookie("cookies-policy")) {
+            setCookie("cookies-policy", "true", 60);
             document.getElementById('cookies-banner').style.display = "block";
         }
     },
