@@ -11,7 +11,7 @@
                 <!-- child menu -->
                 <ul v-if="navitem.fields.pages" aria-label="submenu">
                     <li v-for="childnavitem in navitem.fields.pages" v-bind:key="childnavitem.sys.id">
-                        <nuxt-link :to="childnavitem.fields.slug">{{ childnavitem.fields.title }}</nuxt-link>
+                        <nuxt-link :to="'/' +childnavitem.fields.slug">{{ childnavitem.fields.title }}</nuxt-link>
                     </li>
                 </ul>
             </li>

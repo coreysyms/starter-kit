@@ -12,7 +12,7 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => { 
       //todo: this is not elegant, or really managable, but it works
-      // everyting is a straight string build
+      // everyting is a straight ES6 template literals (string building)
       
       var itemFields = node.data.target.fields;
       var contentType = node.data.target.sys.contentType.sys.id;

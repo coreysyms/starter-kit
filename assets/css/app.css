@@ -4,24 +4,26 @@
   --white: #ffffff;
 }
 
-html,body { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 16px; margin: 0; padding: 0; }
-h1,h2,h3,h4,h5,h6 { font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { font-size: 100%; background-color: var(--black); color: var(--white); }
+html,body { font-family: 'Lato', sans-serif; font-weight: 300; margin: 0; padding: 0; line-height: 1.8; }
 
-h1 { font-size: 3.375em; line-height:1.2; margin-bottom: 1.4rem; margin-top: 0; }
-h2 { font-size: 2.5em; line-height: 1.1818em; margin-bottom: 0.75em; margin-top: 1.2rem; max-width: 60rem; }
-h3 { font-size: 2em; line-height: 1.3000em; margin-bottom: 0.25em; }
-h4 { font-size: 1.5em; line-height: 1.4444em; margin-bottom: 0.75em; margin-top: 1.2rem; }
-h5 { font-size: 1.1em; line-height: 1.6250em; margin-top: 1.6250em;  margin-bottom: 0em; }
-h6 { font-size: 1em;  line-height: 1.4;  margin-top: 1.8571em;  margin-bottom: 0em; }
-p { font-size: 1.2rem; line-height: 1.4; margin-top: 0; margin-bottom: 1.8rem; margin-top: 0.5rem; max-width: 58rem; }
-.lead { font-size: 150%; }
+/* A perfect forth */
+p { margin-bottom: 1.15rem; --minFontSize: 90%; --maxFontSize: 100%; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h1, h2, h3, h4, h5 { margin: 2.75rem 0 1.05rem; font-family: 'Rift', sans-serif; font-weight: 700; line-height: 1.15; }
+h1 { margin-top: 0; --minFontSize: 2.5rem; --maxFontSize: 4.209rem; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h2 { --minFontSize: 1.8rem; --maxFontSize: 3rem; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h3 { --minFontSize: 1.6rem; --maxFontSize: 2.369rem; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h4 { --minFontSize: 1.6rem; --maxFontSize: 1.77rem; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h5 { --minFontSize: 1.2rem; --maxFontSize: 1.333rem; --scaler: 6vw; font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); }
+h6 { margin-bottom: 1.15rem; }
 
-@media screen and (max-width:40rem) {
-  h1 { font-size: 2.5em; }
-  h2 { font-size: 1.8em; }
-  h3 { font-size: 1.6em; }
-  h4 { font-size: 1.2em; }
-}
+/* eyebrow */
+h6 + h1,
+h6 + h2,
+h6 + h3 { margin-top: 1rem; }
+
+small { font-size: 0.75em; }
+.lead { font-size: 1.25rem; }
 
 
 nav { position:relative; top: 0; left: 0; padding: 2rem; z-index: 1000; background: var(--white); }
@@ -94,16 +96,7 @@ hr { border-color: var(--black); border-style: solid; }
 b, strong { font-weight: 700; -webkit-font-smoothing: antialiased; }
 u { border-bottom: solid 3px; text-decoration: none; }
 
-/* grid - Every site should be a little different, but for the sake of simplicity */
-.row { display:grid; grid-column-gap: 2rem; grid-row-gap: 0; max-width: 65rem; margin: 0 auto; }
-.row.max-2 { grid-template-columns: 1fr 1fr; }
-.row.max-3 { grid-template-columns: 1fr 1fr 1fr; }
-.row.max-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
-.row.max-5 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-.row.max-6 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
-
-
-section { padding: 3rem 0 3rem 0; margin: 2rem auto 1rem auto; flex: 1 0 100%; }
+section { padding: 3rem 0 3rem 0; margin: 2rem auto 1rem auto; flex: 1 0 100%; outline:solid; }
 section > .row { padding: 0 1rem; }
 section:last-of-type { margin-bottom:0; }
 
@@ -135,7 +128,7 @@ footer nav > ul li ul li { background-color: inherit !important; color:inherit !
 .previewMode { position: fixed; right: 0; bottom: 0; z-index: 1000000; color: white; height: 20px; font-size: 0.8rem; font-family: monospace; margin: 0; line-height: 20px; top: 0; border-top: solid 4px red; left: 0; text-align: right; letter-spacing: 1px; }
 .previewMode span { background: red; padding: 10px 10px 6px 10px; }
 
-#cookies-banner { position: fixed; bottom: 0; left: 0; right: 0; padding: 2rem; z-index: 1000; background: var(--navy); }
+#cookies-banner { position: fixed; bottom: 0; left: 0; right: 0; padding: 2rem; z-index: 1000; background: var(--black); }
 #cookies-banner h6 { margin-top:0; color:var(--white); }
 #cookies-banner p { margin-bottom:0; color:var(--white); }
 #cookies-banner button { border: solid 2px var(--hoverblue); border-radius: 2px; }
@@ -207,5 +200,5 @@ form textarea { padding: 0.75rem 1rem; border: none; background: var(--grey); fo
 
 
 /* teasers */
-.teaser { display: flex; flex-direction: column; width:100%; max-width: calc(25% - 1rem); padding: 0.5rem; }
+.teaser { display: flex; flex-direction: column; width:100%; flex:1; padding: 0.5rem; }
 .teaser .text { display: flex; flex:1; flex-direction: column; }

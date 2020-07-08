@@ -2,7 +2,7 @@
   <main :class="pageData.fields.classes">
     
     <template v-if="pageData.fields.sections">
-    <BaseSection v-for="section in pageData.fields.sections" v-bind:key="section.sys.id" :fields="section.fields" :typename="section.sys.contentType.sys.id" :aois="aois" />
+    <BaseSection v-for="section in pageData.fields.sections" v-bind:key="section.sys.id" :fields="section.fields" :typename="section.sys.contentType.sys.id" />
     </template>
 
   </main>

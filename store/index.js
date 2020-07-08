@@ -33,9 +33,6 @@ export const mutations = {
   },
   set_page (store, data) {
     store.page = data;
-  },
-  set_aois (store, data) {
-    store.aois = data;
   }
 }
 
@@ -45,7 +42,7 @@ export const actions = {
   //there of course can me more menus if needed
   
   async nuxtServerInit ({ commit }, { store }) {
-    let [navigation, posts, aois] = await Promise.all([
+    let [navigation, posts] = await Promise.all([
       client.getEntries({'content_type': 'navigation', 'include' : '5'}),
       client.getEntries({'content_type': 'page', 'include' : '5', 'limit' : 100})
     ]);
