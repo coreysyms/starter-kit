@@ -18,8 +18,8 @@ $ npm install
 $ https://www.npmjs.com/package/contentful
 
 ##### configure Contentful
-> In nuxt.config set the enviros for your contentful space
-> You could also go the .env way, or key vaults, depends on clients security needs
+> Create a new .env file in your project root to set the enviros for your contentful space
+> You could also go with key vaults, depends on clients security needs.
 $ CTF_SPACE_ID, CTF_CDA_ACCESS_TOKEN, CTF_CDA_ACCESS_TOKEN_PREVIEW_API
 
 ##### Contentful Richtext Render

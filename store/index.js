@@ -42,6 +42,7 @@ export const actions = {
   //there of course can me more menus if needed
 
   async nuxtServerInit ({ commit }, { store }) {
+    
     let [navigation, posts] = await Promise.all([
       client.getEntries({'content_type': 'navigation', 'include' : '5'}),
       client.getEntries({'content_type': 'page', 'include' : '5', 'limit' : 100})
