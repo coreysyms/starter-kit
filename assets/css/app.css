@@ -4,7 +4,7 @@
   --white: #ffffff;
 }
 
-html { font-size: 100%; background-color: var(--black); color: var(--white); }
+html { font-size: 100%; }
 html,body { font-family: 'Lato', sans-serif; font-weight: 300; margin: 0; padding: 0; line-height: 1.8; }
 
 /* A perfect forth */
@@ -33,8 +33,6 @@ nav #menu { display: none; }
 
 nav ul li { position: relative; display: flex; }
 nav ul li a { text-transform: uppercase; transition:all 0.25s ease; font-size:0.9rem; text-decoration: none; z-index: 1; margin: auto 0; font-weight:700; }
-nav ul li:not(.logo) a::after { content:''; position: absolute; top:55%; right:0; left:0; height:0; z-index: -1; background:var(--grey); transition: all 0.25s ease; }
-nav ul li:not(.logo) a.nuxt-link-active::after { height:0.5rem; }
 nav > ul > li > ul { margin-left:0.5rem; }
 nav > ul > li > ul > li > ul { margin-left:1rem; }
 
@@ -95,6 +93,8 @@ p:empty { display: none; }
 hr { border-color: var(--black); border-style: solid; }
 b, strong { font-weight: 700; -webkit-font-smoothing: antialiased; }
 u { border-bottom: solid 3px; text-decoration: none; }
+
+.row { max-width: 60rem; margin: 2rem auto; }
 
 section { padding: 3rem 0 3rem 0; margin: 2rem auto 1rem auto; flex: 1 0 100%; outline:solid; }
 section > .row { padding: 0 1rem; }

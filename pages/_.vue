@@ -1,6 +1,7 @@
 <template>
   <main :class="pageData.fields.classes">
-    
+    <BaseHeader v-if="pageData.fields.header" :fields="pageData.fields.header.fields" v-bind:key="pageData.fields.header.sys.id" />
+
     <template v-if="pageData.fields.sections">
     <BaseSection v-for="section in pageData.fields.sections" v-bind:key="section.sys.id" :fields="section.fields" :typename="section.sys.contentType.sys.id" />
     </template>
@@ -20,7 +21,7 @@ export default {
   },
   head () {
 		return {
-			title: this.pageData.meta_short_title || this.pageMeta.title,
+			title: this.pageData.metaTitle || this.pageMeta.title,
 			meta: [
 				{ hid: 'description', name: 'description', content: this.pageData.metaDescription || this.pageMeta.description },
 				{ property: 'og:title', content: this.pageData.metaTitle || this.pageMeta.title },

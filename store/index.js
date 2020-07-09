@@ -40,7 +40,7 @@ export const actions = {
   //grab the main nav from a custom api endpoint
   //this returns a 2 object array with header nav and footer nav as the default menus
   //there of course can me more menus if needed
-  
+
   async nuxtServerInit ({ commit }, { store }) {
     let [navigation, posts] = await Promise.all([
       client.getEntries({'content_type': 'navigation', 'include' : '5'}),

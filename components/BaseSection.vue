@@ -1,6 +1,6 @@
 <template>
     <sectionDefault v-if="typename === 'section'" :fields="fields" />
-    <!-- add more component sections here -->
+    <!-- add more component sections here of different types if it's so needed -->
 </template>
 
 <script>
