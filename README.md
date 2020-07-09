@@ -13,7 +13,7 @@ $ npm install
 > This starterkit comes with the following
 
 ##### Contentful
-> JavaScript SDK for the Contentful Content Delivery API and Content Preview API. It helps you to easily access your Content stored in Contentful with your JavaScript applications.
+JavaScript SDK for the Contentful Content Delivery API and Content Preview API. It helps you to easily access your Content stored in Contentful with your JavaScript applications.
 $ https://www.npmjs.com/package/contentful
 
 ##### Contentful Richtext Render
@@ -21,7 +21,7 @@ $ https://www.npmjs.com/package/contentful
 $ https://www.npmjs.com/package/@contentful/rich-text-html-renderer
 
 ##### Contentful Richtext Types
-> Type definitions and constants for the Contentful rich text field type.
+Type definitions and constants for the Contentful rich text field type.
 $ https://www.npmjs.com/package/@contentful/rich-text-types
 
 ##### Google Tag Manager
