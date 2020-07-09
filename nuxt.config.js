@@ -1,4 +1,4 @@
-require('dotenv').config({ path: 'starter-kit' })
+require('dotenv').config()
 import pkg from './package'
 
 
