@@ -46,8 +46,7 @@ css: [
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-helmet',
-    '@nuxtjs/axios',
+    'nuxt-helmet'
   ],
   helmet: {
     dnsPrefetchControl: true,
@@ -63,13 +62,14 @@ css: [
     referrerPolicy: true,
     xssFilter: true
   },
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+  /* GTM  */
+  buildModules: [
+    '@nuxtjs/gtm',
+  ],
+  gtm: {
+    id: 'GTM-XXXXXXX'
   },
-
+  
   router: {
     middleware: 'pageTemplate'
   },
@@ -83,9 +83,9 @@ css: [
   ** Enviros
   */
  env: {
-  CTF_SPACE_ID: '2s0mqloigcvr',
-  CTF_CDA_ACCESS_TOKEN: 'TwBmIakvUGhppQUWHHSz1lxjGYB5eZE5X3MrEHOoQ6U',
-  CTF_CDA_ACCESS_TOKEN_PREVIEW_API: 'cdJBB9WdWAfEERyAA8_KJiACcN47FLxAmrNtItbTA7s',
+  CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+  CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
+  CTF_CDA_ACCESS_TOKEN_PREVIEW_API: process.env.CTF_CDA_ACCESS_TOKEN_PREVIEW_API,
 },
 
   /*

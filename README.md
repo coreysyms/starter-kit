@@ -9,11 +9,12 @@
 $ git clone
 $ cd <folder>
 $ npm install
+```
 
 > This starterkit comes with the following
 
 ##### Contentful
-JavaScript SDK for the Contentful Content Delivery API and Content Preview API. It helps you to easily access your Content stored in Contentful with your JavaScript applications.
+> JavaScript SDK for the Contentful Content Delivery API and Content Preview API. It helps you to easily access your > Content stored in Contentful with your JavaScript applications.
 $ https://www.npmjs.com/package/contentful
 
 ##### Contentful Richtext Render
@@ -41,12 +42,12 @@ $ https://axios.nuxtjs.org/
 > Provide basic authentication to your Nuxt.js application
 $ https://www.npmjs.com/package/nuxt-basic-auth-module
 
-# configure Contentful
-> In nuxt.config set the enviros for your contentful space
-$ CTF_SPACE_ID, CTF_CDA_ACCESS_TOKEN, CTF_CDA_ACCESS_TOKEN_PREVIEW_API
-
 # Additionally
 > This package is set with robots.txt to ingore all
+
+# configure Contentful
+> Create a .env file and set the enviros for your contentful space
+$ CTF_SPACE_ID, CTF_CDA_ACCESS_TOKEN, CTF_CDA_ACCESS_TOKEN_PREVIEW_API
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -57,6 +58,5 @@ $ npm run start
 
 # generate static project
 $ npm run generate
-```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

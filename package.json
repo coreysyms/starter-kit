@@ -16,7 +16,8 @@
     "contentful": "^7.10.0",
     "cross-env": "^7.0.0",
     "nuxt": "^2.11.0",
-    "nuxt-helmet": "^1.2.2"
+    "nuxt-helmet": "^1.2.2",
+    "@nuxtjs/gtm": "2.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.0"
