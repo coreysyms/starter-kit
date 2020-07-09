@@ -94,6 +94,8 @@ hr { border-color: var(--black); border-style: solid; }
 b, strong { font-weight: 700; -webkit-font-smoothing: antialiased; }
 u { border-bottom: solid 3px; text-decoration: none; }
 
+.default { min-height: 100vh; display: flex; flex-direction: column; }
+
 .row { max-width: 60rem; margin: 2rem auto; }
 
 section { padding: 3rem 0 3rem 0; margin: 2rem auto 1rem auto; flex: 1 0 100%; outline:solid; }
@@ -104,8 +106,10 @@ section:last-of-type { margin-bottom:0; }
   section { padding: 1.5rem 1rem 1rem 1rem; }
 }
 
+article { max-width:50rem; margin: auto; }
 
-footer { background:var(--black); color:var(--white); }
+
+footer { background:var(--black); color:var(--white); margin: auto 0 0 0;}
 footer nav { position:relative; z-index: 1; background: var(--black); display: grid; grid-template-columns: 1fr 2fr 2fr; max-width: 80rem; margin: 0 auto; padding:3rem 2rem; }
 footer nav .logo { flex:0; max-width: 200px; filter: brightness(0) invert(1); }
 footer nav > ul { column-count: 2; margin-left: 0; column-gap: 2rem; flex-wrap: wrap; }

@@ -54,8 +54,13 @@ const options = {
     [INLINES.ENTRY_HYPERLINK]: (node, next) =>
         `<a href="/${(node.data.target.fields.slug)}">${(next(node.content))}</a>`,
     
-    [INLINES.HYPERLINK]: (node, next) => 
-      `<a href="${node.data.uri}" target="_blank" rel="noreferrer">${next(node.content)}</a>`
+    [INLINES.HYPERLINK]: (node, next) => {
+      if (node.data.uri.includes('#')) {
+        return `<a href="${node.data.uri}">${next(node.content)}</a>`
+      } else { 
+        return `<a href="${node.data.uri}" target="_blank" rel="noreferrer">${next(node.content)}</a>`
+      }
+    } 
   }
 };
 

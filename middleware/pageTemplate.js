@@ -18,7 +18,7 @@ export default function ({ route, store, error }) {
             //so for now, i need to directory string match and allow the page level to 404
 
             //NOTE!!!! All page directories need to find there way here
-            if (/^.*(preview)/i.test(slug) === false) error({ statusCode: 404, message: 'Page Not Found' });
+            if (/^.*(preview|blog)/i.test(slug) === false) error({ statusCode: 404, message: 'Page Not Found' });
 
       } else {
             //return the store value to the page
