@@ -43,10 +43,13 @@ export const actions = {
 
   async nuxtServerInit ({ commit }, { store }) {
     
-    let [navigation, posts] = await Promise.all([
+    let [navigation, posts, contentAssets] = await Promise.all([
       client.getEntries({'content_type': 'navigation', 'include' : '5'}),
-      client.getEntries({'content_type': 'page', 'include' : '5', 'limit' : 100})
+      client.getEntries({'content_type': 'page', 'include' : '5', 'limit' : 100}),
+      client.getEntries({'content_type': 'contentAsset'})
     ]);
+
+    console.log(contentAssets.items[0].fields.selectedTopics)
     
     navigation.items.filter(function(navSet) {
       //set the navs
