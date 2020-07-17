@@ -1,6 +1,6 @@
 {
   "name": "starter-kit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Boilerplate for Nuxt + Contentful",
   "author": "Corey Snyder",
   "private": true,
@@ -8,19 +8,16 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "export": "nuxt export",
+    "serve": "nuxt serve"
   },
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^13.4.0",
-    "@contentful/rich-text-types": "^13.4.0",
-    "@nuxtjs/gtm": "2.3.0",
-    "contentful": "^7.10.0",
-    "cross-env": "^7.0.0",
+    "@contentful/rich-text-html-renderer": "^14.1.1",
+    "@contentful/rich-text-types": "^14.1.1",
+    "contentful": "^7.14.5",
     "dotenv": "^8.2.0",
-    "nuxt": "^2.12.0",
-    "nuxt-helmet": "^1.2.2"
+    "nuxt": "^2.13.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.0"
-  }
+  "devDependencies": {}
 }
+
