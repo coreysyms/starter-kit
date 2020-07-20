@@ -1,6 +1,6 @@
 # starter-kit
 
-> Boilerplate for Nuxt + Contentful
+> Boilerplate for Nuxt + Contentful 2.0.0
 
 ## Build Setup
 
@@ -30,6 +30,12 @@ $ https://www.npmjs.com/package/@contentful/rich-text-html-renderer
 Type definitions and constants for the Contentful rich text field type.
 $ https://www.npmjs.com/package/@contentful/rich-text-types
 
+# possible extra dependencies packages (not installed)
+##### Axios
+> Http lib for all things apis end pointed etc.
+$ https://axios.nuxtjs.org/
+
+
 ##### Google Tag Manager
 > Google Tag Manager Module for Nuxt.js
 $ https://github.com/nuxt-community/gtm-module
@@ -37,11 +43,6 @@ $ https://github.com/nuxt-community/gtm-module
 ##### Nuxt Helmet
 > Helmet helps you secure your Nuxt apps by setting various HTTP headers. By default Helmet will set the X-DNS-Prefetch-Control, X-Frame-Options, Strict-Transport-Security, X-Download-Options, X-Content-Type-Options and X-XSS-Protection headers. Beside that this module will also set by default the X-Permitted-Cross-Domain-Policies header.
 $ https://www.npmjs.com/package/nuxt-helmet
-
-# possible extra dependencies packages (not installed)
-##### Axios
-> Http lib for all things apis end pointed etc.
-$ https://axios.nuxtjs.org/
 
 ##### Basic Auth
 > Provide basic authentication to your Nuxt.js application
